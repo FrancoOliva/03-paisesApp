@@ -3,14 +3,7 @@
 
 <div class="row">
     <div class="col">
-        <form autocomplete="off" (ngSubmit)="buscar()">
-            <input 
-            type="text" 
-            name="termino" 
-            placeholder="Buscar país..." 
-            class="form-control"
-            [(ngModel)]="termino">
-        </form>
+        <app-pais-input></app-pais-input>
     </div>
 </div>
 
@@ -23,27 +16,7 @@
 <div class="row" *ngIf="!hayError">
     <div class="col">
 
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th> # </th>
-                    <th> Bandera </th>
-                    <th> Nombre </th>
-                    <th> Población </th>
-                    <th></th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>bandera</td>
-                    <td>argentina</td>
-                    <td>40millones</td>
-                    <td>Más info...</td>
-                </tr>
-            </tbody>
-        </table>
+        <app-pais-tabla [paises]="paises"></app-pais-tabla>
 
     </div>
 </div>
